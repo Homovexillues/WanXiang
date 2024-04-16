@@ -70,6 +70,7 @@ namespace WanXiang.FileTools
             Console.WriteLine(dateTime1);
             Console.WriteLine(dateTime2);
             Console.WriteLine(dateTime2-dateTime1);
+            Dice dice = new Dice();
         }
     }
 }
