@@ -15,27 +15,26 @@ using YamlDotNet.Serialization;
 using WanXiang.WebTools;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
+using WanXiang.FormatTools;
+using WanXiang.MathTools;
 
 namespace WanXiang.FileTools
 {
-    
-               
     public class OperateJson:IType
     {
-        static void Main()
-        {
-            DateTimeOffset now;
-           
-            var dateTime1 = DateTimeOffset.Now.DateTime;
-            //Stopwatch stopwatch = new Stopwatch();
-            //stopwatch.Start();
-            //JsonTools jt = new JsonTools();
-            //jt.doTxt();
-            //string sourceFilePath = @"C:\Users\15190\Downloads\乐吾乐2D可视化";
-            string UnSortedPictureFilePath = @"C:\Users\rolen\Documents\Damage_picture（第二批）\train";
-            string SortedPictureFilePath = @"C:\Users\rolen\Documents\Damage_picture（第二批）\val";
-            Move mv = new();
-            mv.sortFile(UnSortedPictureFilePath,SortedPictureFilePath,0.1);
+        private static void Main() {
+            //DateTimeOffset now;
+
+            //var dateTime1 = DateTimeOffset.Now.DateTime;
+            ////Stopwatch stopwatch = new Stopwatch();
+            ////stopwatch.Start();
+            ////JsonTools jt = new JsonTools();
+            ////jt.doTxt();
+            ////string sourceFilePath = @"C:\Users\15190\Downloads\乐吾乐2D可视化";
+            //string UnSortedPictureFilePath = @"C:\Users\rolen\Documents\Damage_picture（第二批）\train";
+            //string SortedPictureFilePath = @"C:\Users\rolen\Documents\Damage_picture（第二批）\val";
+            //Move mv = new();
+            //mv.sortFile(UnSortedPictureFilePath,SortedPictureFilePath,0.1);
             //string[] subDirectories = Directory.GetDirectories(sourceFilePath);
             //List<string> allFiles = new List<string>();
             //foreach (var files in subDirectories )
@@ -45,7 +44,6 @@ namespace WanXiang.FileTools
             //        if (File.Exists(Path.Combine(sourceFilePath,Path.GetFileName(file)))) { break; }
             //        else
             //        {
-
             //            File.Move(file, Path.Combine(sourceFilePath,Path.GetFileName(file)));
 
             //        }
@@ -65,12 +63,35 @@ namespace WanXiang.FileTools
             //Timer timer = new Timer();
             //stopwatch.Stop();
             //Console.WriteLine((decimal)stopwatch.ElapsedMilliseconds/1000+"s");
-            
-            var dateTime2 = DateTimeOffset.Now.DateTime;
-            Console.WriteLine(dateTime1);
-            Console.WriteLine(dateTime2);
-            Console.WriteLine(dateTime2-dateTime1);
-            Dice dice = new Dice();
+
+            //var dateTime2 = DateTimeOffset.Now.DateTime;
+            //Console.WriteLine(dateTime1);
+            //Console.WriteLine(dateTime2);
+            //Console.WriteLine(dateTime2-dateTime1);
+            //Dice dice = new Dice();
+            // int[] numbers = [0, 1, 2, 3, 4, 5, 6];
+            // var numQuery =
+            //     from num in numbers
+            //     where (num % 2) == 0
+            //     select num;
+            // foreach(int num in numbers)
+            // {
+            //     Console.Write("{0,1}", num);
+            // }
+            /*DateTime timespan1_start = DateTime.Now;
+            DateTime timespan1_end = DateTime.Now;
+            double[] timespan = new double[3];
+            for (int i = 0;i<timespan.Length;i++)
+            {
+                Console.WriteLine(timespan[i]+"s");
+            }
+            double timespan1 = (timespan1_end - timespan1_start).TotalSeconds;
+            timespan[0] = timespan1;
+            for (int i = 0;i<timespan.Length;i++)
+            {
+                Console.WriteLine(timespan[i]+"s");
+            }*/
+            MathProblem.GoldBach();
         }
     }
 }
